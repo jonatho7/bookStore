@@ -3,7 +3,7 @@
    - openjdk17
 
 before_deploy:
-   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 2.1.0
+   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday-net_http -v 2.1.0
 deploy:
    provider: heroku
    api_key:
