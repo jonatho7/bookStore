@@ -14,4 +14,4 @@ deploy:
   provider: heroku
   api_key: $HEROKU_TOKEN
   on: main
-   app: "book-store-hellmann"
+  app: "book-store-hellmann"
