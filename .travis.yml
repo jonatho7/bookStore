@@ -1,6 +1,7 @@
  language: java
  jdk:
    - openjdk17
+dist: focal
 
 before_deploy:
    - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday-net_http -v 2.1.0
