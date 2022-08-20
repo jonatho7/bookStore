@@ -1,11 +1,17 @@
- language: java
- jdk:
-   - openjdk17
-dist: focal
+language: java
+jdk:
+  - openjdk8
 
-before_deploy:
-   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday-net_http -v 2.1.0
+sudo: required
+
+before_install:
+ - chmod +x gradlew
+ 
+script:
+ - ./gradlew build
+  
 deploy:
-   provider: heroku
-   api_key: $HEROKU_TOKEN
+  provider: heroku
+  api_key: $HEROKU_TOKEN
+  on: main
    app: "book-store-hellmann"
