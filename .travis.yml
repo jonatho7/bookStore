@@ -13,5 +13,5 @@ script:
 deploy:
   provider: heroku
   api_key: $HEROKU_TOKEN
-  on: main
+  on: master
   app: "book-store-hellmann"
